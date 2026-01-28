@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+
+/* Rotation clockwise */
+@keyframes rotate-flower {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* rotation */
+.rotating-flower {
+  transform-origin: 50% 50%;
+  animation: rotate-flower 60s linear infinite;
+}
+
+/* Reverse rotation */
+.rotating-flower-reverse {
+  transform-origin: 50% 50%;
+  animation: rotate-flower -60s linear infinite; 
+}
+
+
+/* Live blink */
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* Apply to any element */
+.blink {
+  animation: blink 1.5s infinite ease-in-out;
+}
